@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router();
+const router =  require('express').Router();
+
 
 // Login page route
 router.get('/login', (req, res) => {
@@ -7,11 +7,11 @@ router.get('/login', (req, res) => {
 });
 
 // Logout page route
-router.get('/logout', (req, res) => {
+// router.get('/logout', (req, res) => {
   // Implement logout logic, for example by destroying the session
-  req.session.destroy((err) => {
-    res.redirect('/');
-  });
-});
+//   req.session.destroy((err) => {
+//     res.redirect('/');
+//   });
+// });
 
 module.exports = router;
