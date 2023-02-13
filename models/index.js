@@ -1,5 +1,3 @@
-const Predictions = require("./Predictions");
-const User = require("./User");
 
-module.exports = { Predictions };
+const User = require("./User");
 module.exports = { User };
