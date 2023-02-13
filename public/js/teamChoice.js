@@ -11,6 +11,8 @@
 //   .then((response) => console.log(response))
 //   .catch((err) => console.error(err));
 
+console.log("hello");
+
 const team = (event) => {
   let clicked = event.target.id;
   clicked = document.getAttribute("id");
