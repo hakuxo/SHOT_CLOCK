@@ -1,7 +1,9 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
-class Predictions extends Model {}
-Predictions.init(
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
+class Prediction extends Model {}
+
+Prediction.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -38,7 +40,8 @@ Predictions.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "predictions"
+    modelName: 'prediction',
   }
 );
-module.exports = Predictions;
+
+module.exports = Prediction;

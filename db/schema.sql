@@ -1,5 +1,3 @@
-DROP DATABASE IF EXISTS  users_db;
-CREATE DATABASE users_db;
+DROP DATABASE IF EXISTS  shotclock_db;
+CREATE DATABASE shotclock_db;
 
-DROP DATABASE IF EXISTS predictions_db;
-CREATE DATABASE predictions_db;
