@@ -1,20 +1,10 @@
-const router =  require('express').Router();
+const router = require("express").Router();
 
+const apiRoutes = require("./api");
+const homepageRoutes = require("./homepageRoutes");
 
-router.get('/', (req, res) => {
-    res.render("homepage");
-});
+router.use("/", homepageRoutes);
+router.use("/api", apiRoutes);
 
-router.get('/api/users/login', (req, res) => {
-    // if (req.session.user){
-    //     res.redirect('/');
-    //     return;
-    // }
-    res.render('login');
-});
-
-const apiRoutes = require('./api');
-
-router.use('/api', apiRoutes);
 
 module.exports = router;
