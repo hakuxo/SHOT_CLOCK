@@ -13,13 +13,26 @@
 
 console.log("hello");
 
+// const team = (event) => {
+//   let clicked = event.target.id;
+//   clicked = document.getAttribute("id");
+//   if (clicked === "hawks") {
+//     console.log("hawks game!");
+//   }
+// };
+
+const choice = document.querySelector(".nba");
+
 const team = (event) => {
-  let clicked = event.target.id;
-  clicked = document.getAttribute("id");
-  if (clicked === "hawks") {
+  let clicked = event.target;
+  console.log(event.target);
+  id = clicked.getAttribute("alt");
+  if (id === "Atlanta Hawks") {
     console.log("hawks game!");
   }
 };
+
+choice.addEventListener("click", team);
 
 // brainstorm...
 // function?
