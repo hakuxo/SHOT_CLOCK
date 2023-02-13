@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/api/users/login', (req, res) => {
-    // if (req.session.logged_in){
+    // if (req.session.user){
     //     res.redirect('/');
     //     return;
     // }
