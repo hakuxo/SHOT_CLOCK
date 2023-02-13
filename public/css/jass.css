@@ -1,13 +1,25 @@
 .loginPage {
-    color:red;
+    color:black;
+    text-align: center;
 } 
 
 .loginContainer{
-    height: 80vh;
-    width: 80vw;
-    border: 2px solid red;
+    height: 50vh;
+    width: 40vw;
+    border: 2px solid black;
 }
 
 .formContainer{
     margin: 5%;
+}
+
+.passBox{
+    border: 2px solid black;
+    border-radius: 4%;
+    height: 5vh;
+}
+
+.emailBox{
+    border: 2px solid black;
+    border-radius: 4%;
 }
