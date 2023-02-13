@@ -5,21 +5,21 @@ const { User } = require('../../models');
 router.post('/login', async (req, res) => {
 
   try{
-  //  const userData = await User.findOne({ where: { email: req.body.email}});
-  //  if(!userData){
-  //   res
-  //     .status(400)
-  //     .json({ message: 'Incorrect email or password, please try again.'});
+   const userData = await User.findOne({ where: { email: req.body.email}});
+   if(!userData){
+    res
+      .status(400)
+      .json({ message: 'Incorrect email or password, please try again.'});
  
-  //  }
-  // const validPass = await userData.checkPassword(req.body.password);
+   }
+  const validPass = await userData.checkPassword(req.body.password);
 
-  // if(!validPass){
-  //   res
-  //     .status(400)
-  //     .json({ message: 'Incorrect email or password, please try again.'});
+  if(!validPass){
+    res
+      .status(400)
+      .json({ message: 'Incorrect email or password, please try again.'});
  
-  // }
+  }
 
   req.session.save(() => {
     // req.session.user_id = userData.id;
