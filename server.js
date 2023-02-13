@@ -1,7 +1,7 @@
 const express = require("express");
 const routes = require("./controllers/index.js");
 const exphbs = require("express-handlebars");
-
+const models = require("./models");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({});
