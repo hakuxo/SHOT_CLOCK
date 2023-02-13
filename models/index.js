@@ -1,7 +1,6 @@
 const User = require("./User");
-const Predictions = require("./Predictions");
+const Prediction = require("./Prediction");
 
 
 
-module.exports = { User };
-module.exports = { Predictions };
+module.exports = { User, Prediction };
