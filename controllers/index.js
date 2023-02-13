@@ -5,7 +5,7 @@ router.get('/', (req, res) => {
     res.render("homepage");
 });
 
-router.get('/api/users/login', (req, res) => {
+router.get('/login', (req, res) => {
     // if (req.session.user){
     //     res.redirect('/');
     //     return;
