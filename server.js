@@ -1,4 +1,5 @@
 const express = require("express");
+const session = require('express-session');
 const routes = require("./controllers/index.js");
 const exphbs = require("express-handlebars");
 const models = require("./models");
@@ -26,20 +27,10 @@ app.set("view engine", "handlebars");
 
 // Makes express use the routes
 app.use(express.static("public"));
-app.use(routes);
+app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-
-app.post('/api/users', (req, res) => {
-    const { name, email, password } = req.body;
-
-  
-    const userData = {
-        id: 1,
-        name,
-        email
-    };
-    res.status(201).json(userData);
-});
+app.use(session(sess));
+app.use(routes);
 
 
 sequelize.sync({force: false}).then (() => {
