@@ -1,3 +1,5 @@
+let id;
+
 const options = {
   method: "GET",
   headers: {
@@ -7,66 +9,73 @@ const options = {
 };
 
 // original code
-// const choice = document.getElementsByClassName("nba");
-
-// const team = (event) => {
-//   let clicked = event.target;
-//   console.dir(event.target);
-//   let id = clicked.parentElement.id;
-//   console.log(id);
-//   window.location.href = "/api/game/" + id;
-// };
-
-// for (let i = 0; i < choice.length; i++) {
-//   const img = choice[i];
-//   img.addEventListener("click", team);
-// }
-
-// fetch("https://api-nba-v1.p.rapidapi.com/teams", options)
-//   .then((response) => response.json())
-//   .then((response, event) => {
-//     console.log(response.response);
-//     for (let i = 0; i < response.response.length; i++) {
-//       let clicked = event.target;
-//       let id = clicked.parentElement.id;
-//       if (id === nickname) {
-//         console.log(response.response);
-//       }
-//     }
-//   })
-//   .catch((err) => console.error(err));
-
-// additional code
+// grabs all teams in homepage.handlebars
 const choice = document.getElementsByClassName("nba");
-let id = null; // Declare and initialize the id variable to null
 
+// once clicked, grabs id and changes route
 const team = (event) => {
   let clicked = event.target;
-  let id = clicked.parentElement.id;
+  console.dir(event.target);
+  id = clicked.parentElement.id;
+  console.log(id);
   window.location.href = "/api/game/" + id;
 };
 
 for (let i = 0; i < choice.length; i++) {
   const img = choice[i];
-  img.addEventListener("click", (event) => {
-    let parent = event.target.parentElement;
-    id = parent.id; // Assign the value of id
-    team(event);
-  });
+  img.addEventListener("click", team);
 }
 
+// API returns all NBA teams
+// when logo is clicked, matches id with nickname key in API object and returns team id from array
 fetch("https://api-nba-v1.p.rapidapi.com/teams", options)
   .then((response) => response.json())
   .then((response) => {
+    console.log(response.response);
+    console.log(window.location.pathname.split("/").pop());
+    id = window.location.pathname.split("/").pop();
     for (let i = 0; i < response.response.length; i++) {
-      let team = response.response[i].id;
-      if (team.nickname === id) {
-        console.log(team);
-        console.log(id);
+      //   console.log(event);
+      //   let clicked = event.target;
+      //   id = clicked.parentElement.id;
+      if (id === response.response[i].nickname) {
+        console.log(response.response[i].id);
       }
     }
   })
   .catch((err) => console.error(err));
+
+// additional code
+// const choice = document.getElementsByClassName("nba");
+// let id = null; // Declare and initialize the id variable to null
+
+// const team = (event) => {
+//   let clicked = event.target;
+//   let id = clicked.parentElement.id;
+//   window.location.href = "/api/game/" + id;
+// };
+
+// for (let i = 0; i < choice.length; i++) {
+//   const img = choice[i];
+//   img.addEventListener("click", (event) => {
+//     let parent = event.target.parentElement;
+//     id = parent.id; // Assign the value of id
+//     team(event);
+//   });
+// }
+
+// fetch("https://api-nba-v1.p.rapidapi.com/teams", options)
+//   .then((response) => response.json())
+//   .then((response) => {
+//     for (let i = 0; i < response.response.length; i++) {
+//       let team = response.response[i].id;
+//       if (team.nickname === id) {
+//         console.log(team);
+//         console.log(id);
+//       }
+//     }
+//   })
+//   .catch((err) => console.error(err));
 
 // brainstorm...
 // function?
