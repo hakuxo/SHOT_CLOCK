@@ -4,24 +4,20 @@
   "description": "NBA Predictor application",
   "main": "server.js",
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/snerowski/SHOT_CLOCK.git"
+    "url": "git+https://github.com/hakuxo/SHOT_CLOCK.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/snerowski/SHOT_CLOCK/issues"
+    "url": "https://github.com/hakuxo/SHOT_CLOCK/issues"
   },
-  "homepage": "https://github.com/snerowski/SHOT_CLOCK#readme",
+  "homepage": "https://github.com/hakuxo/SHOT_CLOCK#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",
@@ -30,8 +26,7 @@
     "express-handlebars": "^6.0.7",
     "express-session": "^1.17.3",
     "mysql2": "^3.1.2",
-    "sequelize": "^6.28.0",
-    "serve": "^14.2.0"
+    "sequelize": "^6.28.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^8.6.0",
