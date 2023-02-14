@@ -33,7 +33,7 @@ router.post("/login", async (req, res) => {
 });
 
 // Logout page route
-router.get("/logout", (req, res) => {
+router.post("/logout", (req, res) => {
   // Implement logout logic, for example by destroying the session
   req.session.destroy((err) => {
     res.redirect("/");

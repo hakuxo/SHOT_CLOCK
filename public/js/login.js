@@ -35,6 +35,8 @@ const signupFormHandler = async (event) => {
             
         });
         if(response.ok){
+            const userData = await response.json();
+            console.log(userData);
             document.location.replace('/');
         } else {
            alert(response.statusText);

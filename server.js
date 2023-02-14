@@ -27,8 +27,19 @@ app.set("view engine", "handlebars");
 // Makes express use the routes
 app.use(express.static("public"));
 app.use(routes);
+app.use(express.json());
 
+app.post('/api/users', (req, res) => {
+    const { name, email, password } = req.body;
 
+  
+    const userData = {
+        id: 1,
+        name,
+        email
+    };
+    res.status(201).json(userData);
+});
 
 
 sequelize.sync({force: false}).then (() => {
