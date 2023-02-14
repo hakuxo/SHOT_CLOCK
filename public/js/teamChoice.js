@@ -21,18 +21,26 @@ console.log("hello");
 //   }
 // };
 
-const choice = document.querySelector(".nba");
+const choice = document.getElementsByClassName("nba");
 
 const team = (event) => {
   let clicked = event.target;
-  console.log(event.target);
-  id = clicked.getAttribute("alt");
-  if (id === "Atlanta Hawks") {
-    console.log("hawks game!");
-  }
+  console.dir(event.target);
+  // id = clicked.getAttribute("alt");
+  let id = clicked.parentElement.id
+  console.log(id)
+  // if (id === "Atlanta Hawks") {
+  //   console.log("hawks game!");
+  // }
+  window.location.href = ("/api/game/" + id)
 };
+for (let i = 0; i < choice.length; i++) {
+  const img = choice[i];
+  img.addEventListener("click", team);  
+}
+  
 
-choice.addEventListener("click", team);
+
 
 // brainstorm...
 // function?

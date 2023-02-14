@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
-router.get("/", (req, res) => {
-  res.render("schedule");
+router.get("/:team", (req, res) => {
+  res.render("schedule", req.params);
 });
 
 
