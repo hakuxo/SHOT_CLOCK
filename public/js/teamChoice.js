@@ -9,7 +9,7 @@ const teamInfo = {
   },
 };
 
-const teamStats = {
+const options = {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "3e0c346377msh286e6e470d53c55p1d6e09jsn13e1bcaa6c46",
@@ -19,50 +19,38 @@ const teamStats = {
 
 // original code
 // grabs all teams in homepage.handlebars
-const choice = document.getElementsByClassName("nba");
+// const choice = document.getElementsByClassName("nba");
 
 // once clicked, grabs id and changes route
-const team = (event) => {
-  let clicked = event.target;
-  console.dir(event.target);
-  id = clicked.parentElement.id;
-  console.log(id);
-  window.location.href = "/api/game/" + id;
-};
+// const team = (event) => {
+//   let clicked = event.target;
+//   console.dir(event.target);
+//   id = clicked.parentElement.id;
+//   console.log(id);
+//   window.location.href = "/api/game/" + id;
+// };
 
-for (let i = 0; i < choice.length; i++) {
-  const img = choice[i];
-  img.addEventListener("click", team);
-}
+// for (let i = 0; i < choice.length; i++) {
+//   const img = choice[i];
+//   img.addEventListener("click", team);
+// }
 
 // API returns all NBA teams
 // when logo is clicked, matches id with nickname key in API object and returns team id from array
-fetch("https://api-nba-v1.p.rapidapi.com/teams", teamInfo)
+fetch("https://api-nba-v1.p.rapidapi.com/teams", options)
   .then((response) => response.json())
   .then((response) => {
     console.log(response.response);
     console.log(window.location.pathname.split("/").pop());
     id = window.location.pathname.split("/").pop();
     for (let i = 0; i < response.response.length; i++) {
+      //   console.log(event);
+      //   let clicked = event.target;
+      //   id = clicked.parentElement.id;
       if (id === response.response[i].nickname) {
-        teamId = response.response[i].id;
-        console.log(teamId);
+        console.log(response.response[i].id);
       }
     }
-    fetch(
-      "https://api-nba-v1.p.rapidapi.com/teams/statistics?id=" +
-        teamId +
-        "&season=2022",
-      teamStats
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        console.log(teamId);
-        response.parameters["id"] = teamId;
-        console.log(response.parameters);
-        console.log(response);
-      })
-      .catch((err) => console.error(err));
   })
   .catch((err) => console.error(err));
 

@@ -4,11 +4,18 @@
 } 
 
 .loginContainer{
-    height: 50vh;
-    width: 40vw;
+    min-height: 50vh;
+    width: 80vw;
     border: 2px solid black;
 }
 
-.formContainer{
-    margin: 5%;
+.loginForm{
+    margin:10%;
+}
+
+.login{
+    min-height: 50vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
 }
