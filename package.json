@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/snerowski/SHOT_CLOCK.git"
+    "url": "git+https://github.com/hakuxo/SHOT_CLOCK.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/snerowski/SHOT_CLOCK/issues"
+    "url": "https://github.com/hakuxo/SHOT_CLOCK/issues"
   },
-  "homepage": "https://github.com/snerowski/SHOT_CLOCK#readme",
+  "homepage": "https://github.com/hakuxo/SHOT_CLOCK#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",
