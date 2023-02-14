@@ -1,12 +1,13 @@
 let id;
+let teamId;
 
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "3e0c346377msh286e6e470d53c55p1d6e09jsn13e1bcaa6c46",
-    "X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com",
-  },
-};
+// const options = {
+//   method: "GET",
+//   headers: {
+//     "X-RapidAPI-Key": "3e0c346377msh286e6e470d53c55p1d6e09jsn13e1bcaa6c46",
+//     "X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com",
+//   },
+// };
 
 // original code
 // grabs all teams in homepage.handlebars
@@ -28,51 +29,17 @@ for (let i = 0; i < choice.length; i++) {
 
 // API returns all NBA teams
 // when logo is clicked, matches id with nickname key in API object and returns team id from array
-fetch("https://api-nba-v1.p.rapidapi.com/teams", options)
-  .then((response) => response.json())
-  .then((response) => {
-    console.log(response.response);
-    console.log(window.location.pathname.split("/").pop());
-    id = window.location.pathname.split("/").pop();
-    for (let i = 0; i < response.response.length; i++) {
-      //   console.log(event);
-      //   let clicked = event.target;
-      //   id = clicked.parentElement.id;
-      if (id === response.response[i].nickname) {
-        console.log(response.response[i].id);
-      }
-    }
-  })
-  .catch((err) => console.error(err));
-
-// additional code
-// const choice = document.getElementsByClassName("nba");
-// let id = null; // Declare and initialize the id variable to null
-
-// const team = (event) => {
-//   let clicked = event.target;
-//   let id = clicked.parentElement.id;
-//   window.location.href = "/api/game/" + id;
-// };
-
-// for (let i = 0; i < choice.length; i++) {
-//   const img = choice[i];
-//   img.addEventListener("click", (event) => {
-//     let parent = event.target.parentElement;
-//     id = parent.id; // Assign the value of id
-//     team(event);
-//   });
-// }
-
 // fetch("https://api-nba-v1.p.rapidapi.com/teams", options)
 //   .then((response) => response.json())
 //   .then((response) => {
+//     console.log(response.response);
+//     console.log(window.location.pathname.split("/").pop());
+//     id = window.location.pathname.split("/").pop();
 //     for (let i = 0; i < response.response.length; i++) {
-//       let team = response.response[i].id;
-//       if (team.nickname === id) {
-//         console.log(team);
-//         console.log(id);
-//       }
+//       if (id === response.response[i].nickname) {
+//         teamId = response.response[i].id;
+//         console.log(teamId);
+//       };
 //     }
 //   })
 //   .catch((err) => console.error(err));

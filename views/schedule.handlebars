@@ -18,15 +18,41 @@
 
 <p>{{team}}</p>
 {{!-- big div container --}}
-<div>
+<div class="row">
     {{!-- left side of the screen --}}
-    <div>
+    <div class="col s6">
         {{!-- top section will show chosen team info --}}
-        <div></div>
+        <div>
+            {{{teamId}}}
+            <p>Chosen team will go here</p>
+        </div>
         {{!-- bottom section will show opposing team info --}}
-        <div></div>
+        <div>
+            <p>Opposing team will go here</p>
+        </div>
     </div>
     {{!-- right side of the screen --}}
     {{!-- questions for predictions will go here and answers will populate in table (not shown to user) --}}
-    <div></div>
+    <div class="col s6">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Ex. Hawks" id="winningTeam" type="text" class="validate">
+                        <label for="win">Who do you think will win?</label>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Ex. 123" id="winningScore" type="text" class="validate">
+                    <label for="winScore">What do you think the winning team score will be?</label>
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Ex. 112" id="losingScore" type="text" class="validate">
+                    <label for="loseScore">What do you think the losing team score will be?</label>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
