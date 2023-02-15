@@ -25,7 +25,6 @@ app.post('/prediction', async function (req, res) {
       winnerScore: req.body.winnerScore,
       loserScore: req.body.loserScore,
     });
-    console.log('Data added:', prediction.toJSON());
     res.send(prediction.toJSON());
   } catch (error) {
     console.error(error);
@@ -34,12 +33,10 @@ app.post('/prediction', async function (req, res) {
 });
 
 const server = app.listen(3000, function () {
-  console.log('App is running on port 3000');
 });
 
 process.on('SIGINT', function () {
   sequelize.close();
   server.close(function () {
-    console.log('Server shut down');
   });
 });
