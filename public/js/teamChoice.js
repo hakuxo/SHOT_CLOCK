@@ -37,11 +37,13 @@ for (let i = 0; i < choice.length; i++) {
     window.location.href = "/api/game/" + id;
   });
 }
-stats();
+
 // for (let i = 0; i < choice.length; i++) {
 //   const img = choice[i];
 //   img.addEventListener("click", team);
 // }
+
+stats();
 
 // // API returns all NBA teams
 // // when logo is clicked, matches id with nickname key in API object and returns team id from array
@@ -90,18 +92,3 @@ function stats() {
     })
     .catch((err) => console.error(err));
 }
-
-// brainstorm...
-// function?
-// async await
-// if else statements
-// if id === hawks, grab their currents stats?
-// choose another team and call the same function (call it twice)
-// render predictions page with both teams' stats showing
-// and when they play each other?
-
-// brainstorm part 2
-// choose team 1
-// put team info in handlebars
-// choose second team
-// put team info in handlebars and render to predictions page
