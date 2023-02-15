@@ -23,28 +23,25 @@ const teamStats = {
 const choice = document.getElementsByClassName("nba");
 
 // once clicked, grabs id and changes route
-function teamOne(event) {
-  let clicked = event.target;
-  console.dir(event.target);
-  id = clicked.parentElement.id;
-  console.log(id);
-  chosenTeam = document.getElementById(id);
-  chosenTeam.style.boxShadow = "10px";
-  stats();
-  
-  // make a new function for team 2 that includes this line so the route changes?
-  // but it's needed in the stats function (line 51) so ??????
-  window.location.href = "/api/game/" + id;
-}
-
-
-
-
 
 for (let i = 0; i < choice.length; i++) {
   const img = choice[i];
-  img.addEventListener("click", teamOne);
+  img.addEventListener("click", (event) => {
+    let clicked = event.target;
+    console.dir(event.target);
+    id = clicked.parentElement.id;
+    console.log(id);
+    chosenTeam = document.getElementById(id);
+    //   chosenTeam.style.boxShadow = "10px";
+    // stats();
+    window.location.href = "/api/game/" + id;
+  });
 }
+stats();
+// for (let i = 0; i < choice.length; i++) {
+//   const img = choice[i];
+//   img.addEventListener("click", team);
+// }
 
 // // API returns all NBA teams
 // // when logo is clicked, matches id with nickname key in API object and returns team id from array
@@ -64,7 +61,7 @@ function stats() {
       fetch(
         "https://api-nba-v1.p.rapidapi.com/teams/statistics?id=" +
           teamId +
-          "&season=2022",
+          "&season=2021",
         teamStats
       )
         .then((response) => response.json())
@@ -72,7 +69,8 @@ function stats() {
           console.log(teamId);
           response.parameters["id"] = teamId;
           console.log(response.parameters);
-          console.log(response);
+          console.log(response.response);
+          let games = response.response[0].games;
         })
         .catch((err) => console.error(err));
     })
