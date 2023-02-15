@@ -1,19 +1,36 @@
 
 
-<p>{{team}}</p>
+{{!-- <p>{{team}}</p> --}}
 {{!-- big div container --}}
 <div class="row">
     {{!-- left side of the screen --}}
     <div class="col s6">
-        {{!-- top section will show chosen team info --}}
-        <div>
-            <p>{{{teamId}}}</p>
-        </div>
-        {{!-- bottom section will show opposing team info --}}
-        <div>
-            <p>Opposing team will go here</p>
-        </div>
+        {{!-- chosen team stats --}}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <div id="content"></div>
+        {{!-- <p>2021 Season Stats for the {{team}}:</p>
+        <p>Games: {{games}}</p>
+        <p>Assists: </p>
+        <p>Blocks: </p>
+        <p>Steals: </p>
+        <p>Points: </p>
+        <p>Fast break points: </p>
+        <p>Points in the paint: </p> --}}
+
     </div>
+    <script id="myTemplate" type="text/x-handlebars-template">
+        <div>
+            <p>2021 Season Stats for the {{team}}:</p>
+            <p>Games: \{{games}}</p>
+            <p>Assists: \{{assists}}</p>
+            <p>Blocks: \{{blocks}}</p>
+            <p>Steals: \{{steals}}</p>
+            <p>Points: \{{points}}</p>
+            <p>Fast break points: \{{fastBreakPoints}}</p>
+            <p>Points in the paint:\{{pointsInPaint}}</p>
+        </div>
+      </script>
     {{!-- right side of the screen --}}
     {{!-- questions for predictions will go here and answers will populate in table (not shown to user) --}}
     <section class="predictionBox">
@@ -51,3 +68,6 @@
     </div>
 </div>
 </section>
+<script src="/js/teamChoice.js"></script>
+<script type='text/javascript' src='/js/teamChoice.js'></script>
+{{!-- <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script> --}}
