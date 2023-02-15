@@ -31,10 +31,15 @@ function teamOne(event) {
   chosenTeam = document.getElementById(id);
   chosenTeam.style.boxShadow = "10px";
   stats();
+  
   // make a new function for team 2 that includes this line so the route changes?
   // but it's needed in the stats function (line 51) so ??????
   window.location.href = "/api/game/" + id;
 }
+
+
+
+
 
 for (let i = 0; i < choice.length; i++) {
   const img = choice[i];
