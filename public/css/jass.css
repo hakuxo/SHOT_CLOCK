@@ -5,6 +5,7 @@ body{
 .login-signup{
     display:flex;
     margin-top: 10%;
+    justify-content: center;
 }
 
 .loginPage {
@@ -13,8 +14,8 @@ body{
 } 
 
 .loginContainer{
-    min-height: 10vh;
-    width: 20vw;
+    /* min-height: 10vh;
+    width: 20vw; */
     border: 2px solid black;
 }
 
@@ -25,6 +26,7 @@ body{
 .login{
     min-height: 40vh;
     width:50vw;
+    /* margin-right:20%; */
     display: flex;
     justify-content: center;
 }
@@ -65,4 +67,6 @@ body{
     justify-content: center;
     margin-left: 1%;
 }
+
+
 
