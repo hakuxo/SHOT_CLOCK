@@ -32,14 +32,19 @@
     </div>
     {{!-- right side of the screen --}}
     {{!-- questions for predictions will go here and answers will populate in table (not shown to user) --}}
+    <section class="predictionBox">
     <div class="col s6">
         <div class="row">
-            <form class="col s12">
+            <form class="predictionForm">
                 <div class="row">
                     <div class="input-field col s12">
                         <input placeholder="Ex. Hawks" id="winningTeam" type="text" class="validate">
                         <label for="win">Who do you think will win?</label>
                     </div>
+                </div>
+                <div class="input-field col s8">
+                    <input placeholder="Ex. Heat" id="losingTeam" type="text" class="validate">
+                    <label for="loss">Who do you think will lose?</label>
                 </div>
                 <div class="row">
                 <div class="input-field col s6">
@@ -61,3 +66,4 @@
         </div>
     </div>
 </div>
+</section>
