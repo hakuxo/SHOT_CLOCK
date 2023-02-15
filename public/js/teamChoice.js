@@ -30,7 +30,6 @@ for (let i = 0; i < choice.length; i++) {
     let clicked = event.target;
     console.dir(event.target);
     let id = clicked.parentElement.id;
-    console.log(id);
     chosenTeam = document.getElementById(id);
     //   chosenTeam.style.boxShadow = "10px";
     // stats();
@@ -51,13 +50,10 @@ function stats() {
   fetch("https://api-nba-v1.p.rapidapi.com/teams", teamInfo)
     .then((response) => response.json())
     .then((response) => {
-      console.log(response.response);
-      console.log(window.location.pathname.split("/").pop());
       let id = window.location.pathname.split("/").pop();
       for (let i = 0; i < response.response.length; i++) {
         if (id === response.response[i].nickname) {
           teamId = response.response[i].id;
-          console.log(teamId);
         }
       }
       fetch(
@@ -68,10 +64,7 @@ function stats() {
       )
         .then((response) => response.json())
         .then((response) => {
-          console.log(teamId);
           response.parameters["id"] = teamId;
-          console.log(response.parameters);
-          console.log(response.response);
           let source = document.getElementById("myTemplate").innerHTML;
           let template = Handlebars.compile(source);
           const context = {
@@ -83,9 +76,7 @@ function stats() {
             fastBreakPoints: response.response[0].fastBreakPoints,
             pointsInPaint: response.response[0].pointsInPaint,
           };
-          console.log(context);
           let html = template(context);
-          console.log(html);
           document.getElementById("content").innerHTML = html;
         })
         .catch((err) => console.error(err));
