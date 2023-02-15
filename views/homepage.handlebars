@@ -1,29 +1,14 @@
-{{!-- Header & Nav bar properties --}}
-<header>
-  <nav>
-    <div class="nav-wrapper">
-      <a class="brand-logo">SHOT CLOCK</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <div>
-      {{!-- Search bar and navigation --}}
-    </div>
-        <li><a class="formContainer" href="login">log out</a></li>
-        <li><a href="">dashboard</a></li>
-        <li><input id="search" type="search" required>
-        <label class="label-icon" for="search"></label>
-      </ul>
-    </div>
-  </nav>
-  </header>
-  
+
   {{!-- Main content on page --}}
 <main>
   {{!-- Youtube Highlight --}}
+  <div class="youtube">
   <div class="center-align">
-    <iframe anonymous src="https://www.youtube-nocookie.com/embed/AOYACk7m7Fk" style="border:0px #ffffff none;" name="youtube card" scrolling="no" frameborder="1"  marginheight="0px" marginwidth="0px" height="315px" width="560px" allowfullscreen></iframe>
+    <iframe anonymous src="https://www.youtube-nocookie.com/embed/AOYACk7m7Fk" style="border:0px #ffffff none;" name="youtube card" scrolling="no" frameborder="1"  height="315px" width="560px" allowfullscreen></iframe>
+  </div>
   </div>
   <div>
-    <h3 class="center-align">Choose a team to start predicting!</h3>
+    <h3 class="choose center-align">Choose a team to start predicting!</h3>
   </div>
   {{!-- Teams --}}
   <div class="container">
@@ -74,21 +59,11 @@
 {{!-- Display both on schedule.handlebars page --}}
 
 {{!-- Footer properties --}}
-   <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
-            </div>
+   <footer class="page-footer red darken-4">
           <div class="footer-copyright">
             <div class="container">
             © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <a class="grey-text text-lighten-4 right" href="https://github.com/hakuxo/SHOT_CLOCK">More Links</a>
             </div>
           </div>
         </footer>
