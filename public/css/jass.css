@@ -29,6 +29,11 @@ body{
     justify-content: center;
 }
 
+/* Start https://www.cursors-4u.com */ 
+* {cursor: url(https://cur.cursors-4u.net/sports/spo-1/spo52.cur), auto !important;} 
+/* End https://www.cursors-4u.com */
+
+
 .signupPage {
     color:whitesmoke;
     text-align: center;
@@ -58,6 +63,8 @@ body{
 .youtube{
     display: flex;
     justify-content: center;
-    margin-left: 17%;
+    margin-left: 1%;
 }
+
+
 
