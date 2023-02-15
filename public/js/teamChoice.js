@@ -1,8 +1,8 @@
-// let id;
+
 let teamId;
-// let firstChoice;
 let chosenTeam;
 
+// general team information
 const teamInfo = {
   method: "GET",
   headers: {
@@ -11,6 +11,7 @@ const teamInfo = {
   },
 };
 
+// team statistics from 2021 season
 const teamStats = {
   method: "GET",
   headers: {
@@ -19,33 +20,23 @@ const teamStats = {
   },
 };
 
-// grabs all teams in homepage.handlebars
+// each team in homepage.handlebars
 const choice = document.getElementsByClassName("nba");
 
-// once clicked, grabs id and changes route
-
+// grabs team id from API and changes route
 for (let i = 0; i < choice.length; i++) {
   const img = choice[i];
   img.addEventListener("click", (event) => {
     let clicked = event.target;
-    console.dir(event.target);
     let id = clicked.parentElement.id;
     chosenTeam = document.getElementById(id);
-    //   chosenTeam.style.boxShadow = "10px";
-    // stats();
     window.location.href = "/api/game/" + id;
   });
 }
 
-// for (let i = 0; i < choice.length; i++) {
-//   const img = choice[i];
-//   img.addEventListener("click", team);
-// }
-
 stats();
 
-// // API returns all NBA teams
-// // when logo is clicked, matches id with nickname key in API object and returns team id from array
+// matches id with nickname key in API object and returns team id from array
 function stats() {
   fetch("https://api-nba-v1.p.rapidapi.com/teams", teamInfo)
     .then((response) => response.json())
@@ -56,6 +47,7 @@ function stats() {
           teamId = response.response[i].id;
         }
       }
+      //   team statistics
       fetch(
         "https://api-nba-v1.p.rapidapi.com/teams/statistics?id=" +
           teamId +
@@ -67,6 +59,7 @@ function stats() {
           response.parameters["id"] = teamId;
           let source = document.getElementById("myTemplate").innerHTML;
           let template = Handlebars.compile(source);
+          //   object of team statistics to be displayed to user
           const context = {
             games: response.response[0].games,
             assists: response.response[0].assists,
