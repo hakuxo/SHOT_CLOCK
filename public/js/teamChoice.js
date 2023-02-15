@@ -1,4 +1,3 @@
-
 let teamId;
 let chosenTeam;
 
