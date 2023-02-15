@@ -23,9 +23,7 @@ router.post("/login", async (req, res) => {
         .json({ message: "Incorrect email or password, please try again." });
       return;
     }
-    // const loginData = { user_id: userData.id, logged_in: true };
-    // await Login.create(loginData);
-    // console.log('hello')
+ 
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
@@ -33,13 +31,11 @@ router.post("/login", async (req, res) => {
       res.status(200).json({ user: userData, message: "You are logged in!" });
     });
   } catch (err) {
-    console.log(err)
     res.status(400).json(err);
   }
 });
 
   router.post('/', async(req, res) => {
-    // console.log(req.body)
   const { username, email, password } = req.body;
 
 
@@ -52,7 +48,6 @@ router.post("/login", async (req, res) => {
   const afterUser = await User.create(userData)
   if(afterUser) {
     res.status(201).json(userData);
-    // res.redirect('/')
   }
 
 });

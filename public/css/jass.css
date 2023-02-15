@@ -1,11 +1,19 @@
+
+
+.login-signup{
+    display:flex;
+    height: 100vh;
+    width: 100vw;
+}
+
 .loginPage {
     color:black;
     text-align: center;
 } 
 
 .loginContainer{
-    min-height: 50vh;
-    width: 80vw;
+    min-height: 30vh;
+    width: 40vw;
     border: 2px solid black;
 }
 
@@ -15,7 +23,29 @@
 
 .login{
     min-height: 50vh;
-    width:100vw;
+    width:50vw;
+    display: flex;
+    justify-content: center;
+}
+
+.signupPage {
+    color:black;
+    text-align: center;
+} 
+
+.signupContainer{
+    min-height: 30vh;
+    width: 40vw;
+    border: 2px solid black;
+}
+
+.signupForm{
+    margin:10%;
+}
+
+.signup{
+    min-height: 50vh;
+    width:50vw;
     display: flex;
     justify-content: center;
 }
