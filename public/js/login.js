@@ -4,14 +4,15 @@ const loginFormHandler = async (event) => {
 
 const email = document.querySelector('#email-login').value.trim();
 const password = document.querySelector('#pass-login').value.trim();
-console.log(email, password);
 if (email && password) {
+    // fetching the /api/users/login url
     const response = await fetch('/api/users/login', {
         method: 'POST',
         body: JSON.stringify({email, password}),
         headers: {'Content-Type': 'application/json'},
         
     });
+    // if everything is goes well, it will move on to the homepage
     if(response.ok){
         document.location.replace('/');
     } else {
@@ -29,15 +30,16 @@ const signupFormHandler = async (event) => {
     const password = document.querySelector('#password-signup').value.trim();
     
     if (email && password) {
+         // fetching the /api/users/login url
         const response = await fetch('/api/users', {
             method: 'POST',
             body: JSON.stringify({username, email, password}),
             headers: {'Content-Type': 'application/json'},
             
         });
+         // if everything is goes well, it will move on to the homepage
         if(response.ok){
             const userData = await response.json();
-            console.log(userData);
             document.location.replace('/');
         } else {
            alert(response.statusText);
