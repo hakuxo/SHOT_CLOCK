@@ -1,29 +1,14 @@
-{{!-- Header & Nav bar properties --}}
-<header>
-  <nav>
-    <div class="nav-wrapper">
-      <a class="brand-logo">SHOT CLOCK</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <div>
-      {{!-- Search bar and navigation --}}
-    </div>
-        <li><a href="">log out</a></li>
-        <li><a href="">dashboard</a></li>
-        <li><input id="search" type="search" required>
-        <label class="label-icon" for="search"></label>
-      </ul>
-    </div>
-  </nav>
-  </header>
-  
+
   {{!-- Main content on page --}}
 <main>
   {{!-- Youtube Highlight --}}
+  <div class="youtube">
   <div class="center-align">
-    <iframe anonymous src="https://www.youtube-nocookie.com/embed/AOYACk7m7Fk" style="border:0px #ffffff none;" name="youtube card" scrolling="no" frameborder="1"  marginheight="0px" marginwidth="0px" height="315px" width="560px" allowfullscreen></iframe>
+    <iframe anonymous src="https://www.youtube-nocookie.com/embed/AOYACk7m7Fk" style="border:0px #ffffff none;" name="youtube card" scrolling="no" frameborder="1"  height="315px" width="560px" allowfullscreen></iframe>
+  </div>
   </div>
   <div>
-    <h3 class="center-align">Choose a team to start predicting!</h3>
+    <h3 class="choose center-align">Choose a team to start predicting!</h3>
   </div>
   {{!-- Teams --}}
   <div class="container">
@@ -36,55 +21,49 @@
       <div><a id="Cavaliers" class = " nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/cleveland cavaliers.png" alt="Cleveland Cavaliers"></a></div>
     </div>
     <div class="row">
-      <div><a id="mavericks" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src = "/images/dallas mavericks.png" alt="Dallas Mavericks"></a></div>
-      <div><a id="nuggets" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/denver nuggets.png" alt="Denver Nuggets"></a></div>
-      <div><a id="pistons" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/detroit pistons.png" alt="Detroit Pistons"></a></div>
-      <div><a id="warriors" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/golden state warriors.png" alt="Golden State Warriors"></a></div>
-      <div><a id="rockets" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/houston rockets.png" alt="Houston Rockets"></a></div>
-      <div><a id="pacers" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/indiana pacers.png" alt="Indiana Pacers"></a></div>
+      <div><a id="Mavericks" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src = "/images/dallas mavericks.png" alt="Dallas Mavericks"></a></div>
+      <div><a id="Nuggets" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/denver nuggets.png" alt="Denver Nuggets"></a></div>
+      <div><a id="Pistons" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/detroit pistons.png" alt="Detroit Pistons"></a></div>
+      <div><a id="Warriors" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/golden state warriors.png" alt="Golden State Warriors"></a></div>
+      <div><a id="Rockets" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/houston rockets.png" alt="Houston Rockets"></a></div>
+      <div><a id="Pacers" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/indiana pacers.png" alt="Indiana Pacers"></a></div>
     </div>
     <div class="row">
-      <div><a id="clippers" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src = "/images/los angeles clippers.png" alt="Los Angeles Clippers"></a></div>
-      <div><a id="lakers" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/los angeles lakers.png" alt="Los Angeles Lakers"></a></div>
-      <div><a id="grizzlies" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/memphis grizzlies.png" alt="Memphis Grizzlies"></a></div>
-      <div><a id="heat" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/miami heat.png" alt="Miami Heat"></a></div>
-      <div><a id="bucks" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/milwaukee bucks.png" alt="Milwaukee Bucks"></a></div>
-      <div><a id="timberwolves" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/minnesota timberwolves.png" alt="Minnesota Timberwolves"></a></div>
+      <div><a id="Clippers" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src = "/images/los angeles clippers.png" alt="Los Angeles Clippers"></a></div>
+      <div><a id="Lakers" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/los angeles lakers.png" alt="Los Angeles Lakers"></a></div>
+      <div><a id="Grizzlies" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/memphis grizzlies.png" alt="Memphis Grizzlies"></a></div>
+      <div><a id="Heat" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/miami heat.png" alt="Miami Heat"></a></div>
+      <div><a id="Bucks" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/milwaukee bucks.png" alt="Milwaukee Bucks"></a></div>
+      <div><a id="Timberwolves" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/minnesota timberwolves.png" alt="Minnesota Timberwolves"></a></div>
     </div>
     <div class="row">
-      <div><a id="pelicans" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src = "/images/new orleans pelicans.png" alt="New Orleans Pelicans"></a></div>
-      <div><a id="knicks" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/new york knicks.png" alt="New York Knicks"></a></div>
-      <div><a id="thunder" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/oklahoma city thunder.png" alt="Oklahoma City Thunder"></a></div>
-      <div><a id="magic" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/orlando magic.png" alt="Orlando Magic"></a></div>
+      <div><a id="Pelicans" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src = "/images/new orleans pelicans.png" alt="New Orleans Pelicans"></a></div>
+      <div><a id="Knicks" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/new york knicks.png" alt="New York Knicks"></a></div>
+      <div><a id="Thunder" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/oklahoma city thunder.png" alt="Oklahoma City Thunder"></a></div>
+      <div><a id="Magic" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/orlando magic.png" alt="Orlando Magic"></a></div>
       <div><a id="76ers" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/philadelphia 76ers.png" alt="Philadelphia 76ers"></a></div>
-      <div><a id="suns" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src = "/images/phoenix suns.png" alt="Phoenix Suns"></a></div>
+      <div><a id="Suns" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src = "/images/phoenix suns.png" alt="Phoenix Suns"></a></div>
     </div>
     <div class="row">
-      <div><a id="trailblazers" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/portland trail blazers.png" alt="Portland Trail Blazers"></a></div>
-      <div><a id="kings" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/sacremento kings.png" alt="Sacremento Kings"></a></div>
-      <div><a id="spurs" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/san antonio spurs.png" alt="San Antonio Spurs"></a></div>
-      <div><a id="raptors" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/toronto raptors.png" alt="Toronto Raptors"></a></div>
-      <div><a id="jazz" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/utah jazz.png" alt="Utah Jazz"></a></div>
-      <div><a id="wizards" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src = "/images/washington wizards.png" alt="Washington Wizards"></a></div>
+      <div><a id="Trailblazers" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/portland trail blazers.png" alt="Portland Trail Blazers"></a></div>
+      <div><a id="Kings" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/sacremento kings.png" alt="Sacremento Kings"></a></div>
+      <div><a id="Spurs" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/san antonio spurs.png" alt="San Antonio Spurs"></a></div>
+      <div><a id="Raptors" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/toronto raptors.png" alt="Toronto Raptors"></a></div>
+      <div><a id="Jazz" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src="/images/utah jazz.png" alt="Utah Jazz"></a></div>
+      <div><a id="Wizards" class = "nba col s6 m4 l2" href = "#"><img class = "responsive-img hoverable" src = "/images/washington wizards.png" alt="Washington Wizards"></a></div>
     </div>
   </div>
 </main>
+{{!-- Use partial to render page again? With chosen team greyed out or with shadow effect --}}
+{{!-- Grab opposing team info as well --}}
+{{!-- Display both on schedule.handlebars page --}}
+
 {{!-- Footer properties --}}
-   <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
-            </div>
+   <footer class="page-footer red darken-4">
           <div class="footer-copyright">
             <div class="container">
             © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <a class="grey-text text-lighten-4 right" href="https://github.com/hakuxo/SHOT_CLOCK">More Links</a>
             </div>
           </div>
         </footer>

@@ -1,32 +1,53 @@
-{{!-- Header & Nav bar properties --}}
-<header>
-    <nav>
-        <div class="nav-wrapper">
-            <a class="brand-logo">SHOT CLOCK</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <div>
-                    {{!-- Search bar and navigation --}}
-                </div>
-                <li><a href="">log out</a></li>
-                <li><a href="">dashboard</a></li>
-                <li><input id="search" type="search" required>
-                    <label class="label-icon" for="search"></label>
-            </ul>
-        </div>
-    </nav>
-</header>
+
 
 <p>{{team}}</p>
 {{!-- big div container --}}
-<div>
+<div class="row">
     {{!-- left side of the screen --}}
-    <div>
+    <div class="col s6">
         {{!-- top section will show chosen team info --}}
-        <div></div>
+        <div>
+            <p>{{{teamId}}}</p>
+        </div>
         {{!-- bottom section will show opposing team info --}}
-        <div></div>
+        <div>
+            <p>Opposing team will go here</p>
+        </div>
     </div>
     {{!-- right side of the screen --}}
     {{!-- questions for predictions will go here and answers will populate in table (not shown to user) --}}
-    <div></div>
+    <section class="predictionBox">
+    <div class="col s6">
+        <div class="row">
+            <form class="predictionForm">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Ex. Hawks" id="winningTeam" type="text" class="validate">
+                        <label for="win">Who do you think will win?</label>
+                    </div>
+                </div>
+                <div class="input-field col s8">
+                    <input placeholder="Ex. Heat" id="losingTeam" type="text" class="validate">
+                    <label for="loss">Who do you think will lose?</label>
+                </div>
+                <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Ex. 123" id="winningScore" type="text" class="validate">
+                    <label for="winScore">What do you think the winning team score will be?</label>
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Ex. 112" id="losingScore" type="text" class="validate">
+                    <label for="loseScore">What do you think the losing team score will be?</label>
+                </div>
+                <div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right"></i>
+                             </button>
+        
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
+</section>

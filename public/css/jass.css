@@ -1,17 +1,68 @@
+body{
+    background-color: rgb(24, 24, 125);
+}
+
+.login-signup{
+    display:flex;
+    margin-top: 10%;
+}
+
 .loginPage {
-    color:black;
+    color:whitesmoke;
     text-align: center;
 } 
 
 .loginContainer{
-    height: 50vh;
-    width: 40vw;
+    min-height: 10vh;
+    width: 20vw;
     border: 2px solid black;
 }
 
-.formContainer{
-    margin: 5%;
+.loginForm{
+    margin:10%;
 }
+
+.login{
+    min-height: 40vh;
+    width:50vw;
+    display: flex;
+    justify-content: center;
+}
+
 /* Start https://www.cursors-4u.com */ 
 * {cursor: url(https://cur.cursors-4u.net/sports/spo-1/spo52.cur), auto !important;} 
 /* End https://www.cursors-4u.com */
+
+
+.signupPage {
+    color:whitesmoke;
+    text-align: center;
+} 
+
+.signupContainer{
+    min-height: 10vh;
+    width: 20vw;
+    border: 2px solid black;
+}
+
+.signupForm{
+    margin:10%;
+}
+
+.signup{
+    min-height: 40vh;
+    width:50vw;
+    display: flex;
+    justify-content: center;
+}
+
+.choose{
+    color: white;
+}
+
+.youtube{
+    display: flex;
+    justify-content: center;
+    margin-left: 17%;
+}
+

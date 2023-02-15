@@ -1,4 +1,5 @@
 const express = require("express");
+const session = require('express-session');
 const routes = require("./controllers/index.js");
 const exphbs = require("express-handlebars");
 const models = require("./models");
@@ -23,10 +24,13 @@ const sess = {
 app.engine("handlebars", hbs.engine);
 
 app.set("view engine", "handlebars");
+
 // Makes express use the routes
 app.use(express.static("public"));
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+app.use(session(sess));
 app.use(routes);
-
 
 
 sequelize.sync({force: false}).then (() => {
